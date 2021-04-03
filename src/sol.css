@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+
+}
+body{
+    background: url(pexels-miriam-espacio-110854.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+ul{
+    float: left;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li{
+    display: inline-block;
+
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 5px 20px;
+    border: 1px solid rgb(19, 18, 18);
+    transition: 0.6s ease;
+background-color: lightgrey;
+}
+ul li a:hover{
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,#3789d6,#91bed8);color: #000;
+
+}
+ul li.active a{
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d ;
+
+}
+.earth{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    background: #ffff;
+    background: url(./image.jpg) ;
+    background-size: cover;
+    background-repeat: repeat-x;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 1),
+    0 0 50px #4069ff;
+    animation: animateEarth 15s linear infinite;
+
+}
+@keyframes animateEarth
+{
+    0%
+{
+    background-position: 0 0;
+}
+100%
+{
+    background-position: -750px 0;
+   }
+
+}
+.circle{
+    transform-style: preserve-3d;
+    animation: animateText 10s linear infinite ;
+}
+.circle span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #35146f;
+    font-size: 3em;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 5px 11px;
+    transform: rotateY(calc(var--i) * calc(360deg / 31)))
+    translateZ(200px);
+}
+@keyframes animateText
+{
+    0%
+{
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+}
+100%
+
+}
+h1 {
+    font-size: 6vw;
+    color: #c3e3f6;
+    font-family: cursive;
+}
+/* Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+    background: #fafafa;
+    -webkit-box-shadow: inset 1px 1px 2px #d1ecc3;
+    border: 1px solid #D8D8D8;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #033642;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(102, 189, 224, 0.4)
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(rgba(0, 234, 255, 0));
+    }
+    ::-webkit-scrollbar-thumb:active {
+    background: rgb(180, 219, 251);
+    -webkit-box-shadow: inset 1px 1px 2px rgba(37, 172, 226, 0.3);
+p {
+    font-size: 10px;
+}
